@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+	<head>
+		<title>List View</title>
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<link rel="stylesheet" href="../Styles/bootstrap.css">
+		<link rel="stylesheet" href="../Styles/style.css">
+		<link rel="stylesheet" href="../Styles/datatable.min.css">
+	</head>
+	<body>
+	<form id="frmview">
+		<div id="	">
+			<div class="overlay-loader">
+				<div id="floatingBarsG">
+					<div class="blockG" id="rotateG_01"></div>
+					<div class="blockG" id="rotateG_02"></div>
+					<div class="blockG" id="rotateG_03"></div>
+					<div class="blockG" id="rotateG_04"></div>
+					<div class="blockG" id="rotateG_05"></div>
+					<div class="blockG" id="rotateG_06"></div>
+					<div class="blockG" id="rotateG_07"></div>
+					<div class="blockG" id="rotateG_08"></div>
+				</div>
+			</div>
+			<div class="row">
+				<div class="col-xs-offset-3 col-sm-4"><label></label>
+			</div>
+			</div>
+			<div class="row">
+							<div class="col-xs-offset-1 col-sm-4">
+								<a href="javascript:;" class="btn btn-primary btn-md btnaddentry" title="submit">Add Entry</a>								
+							</div>
+						</div>
+			<div class="row">
+				<div class="col-xs-offset-0 col-sm-4"><label></label>
+			</div>
+			</div>
+			<div class="container">
+				<div class="table-responsive">
+					<table id="dtentrylist" class="display table dtentrylist" width="100%" cellspacing="0" width="100%">
+						<thead>
+							<tr>
+								<th>Entry No</th>
+								<th>Entry Date</th>
+								<th>Customer Code</th>								
+								<th>Customer Name</th>								
+								<th>DC No</th>								
+								<th>DC Date</th>								
+								<th>Inspection Status</th>								
+							</tr>
+						</thead>
+					</table>
+				</div>
+			</div>
+		</div>
+		</form>
+		<script type="text/javascript" src="../Scripts/jquery.js"></script>
+		<script type="text/javascript" src="../Scripts/moment.js"></script>
+		<script type="text/javascript" src="../Scripts/bootstrap-datetimepicker.js"></script>
+		<script type="text/javascript" src="../Scripts/datatable.min.js"></script>
+		<script type="text/javascript" src="../Scripts/listview.js"></script>
+	</body>
+</html>

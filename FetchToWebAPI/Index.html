@@ -1,0 +1,363 @@
+﻿<!DOCTYPE html>
+<html>
+	<head>
+		<title>Entry form</title>
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="Styles/bootstrap.css" />
+        <link rel="stylesheet" href="Styles/bootstrap-datetimepicker.css">
+        <link rel="stylesheet" href="Styles/style.css" />
+        <link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+
+
+	</head>
+	<body>
+		<div id="wrapper">
+			<div class="overlay-loader">
+				<div id="floatingBarsG">
+					<div class="blockG" id="rotateG_01"></div>
+					<div class="blockG" id="rotateG_02"></div>
+					<div class="blockG" id="rotateG_03"></div>
+					<div class="blockG" id="rotateG_04"></div>
+					<div class="blockG" id="rotateG_05"></div>
+					<div class="blockG" id="rotateG_06"></div>
+					<div class="blockG" id="rotateG_07"></div>
+					<div class="blockG" id="rotateG_08"></div>
+				</div>
+			</div>
+			<div class="container">
+                <form name="frmentry" id="frmentry">
+				<div id="left">
+				<h2 class="subHead">Customer Details</h2>				
+				</div>
+				<div id="middle">&nbsp;</div>
+				<div id="right"><a href="listview.html" class="btn btn-primary btn-md btnalist" title="submit">List Jobs</a>&nbsp;<a href="login.html" class="btn btn-primary btn-md btnaddentry" title="submit">Login</a></div>
+				<div>
+					
+							<div class="row">
+								<div class="col-xs-12">
+								
+                                    	<label>Does this structure involve any foreign entities?*</label>
+									<div class="row-field">
+										<label class="radio-lbl inline">
+											<span class="custom-radio">
+											<input type="radio" class="radio-btn check-radio clear-radio" name="work_progress" value="On Site"> </span> On Site
+										</label>
+										<label class="radio-lbl last">
+											<span class="custom-radio">
+											<input type="radio" class="radio-btn check-radio clear-radio"  name="work_progress" value="Office" > </span> In-House
+										</label>
+									</div>
+								</div>
+							</div>
+                          <div class="row">									
+									<div class="col-xs-12 col-sm-4">
+										<label>Entry No</label>
+										<div class="row-field">
+											<input type="text" class="form-input  entry_no" name="entry_no">
+
+										</div>
+									</div>
+									<div class="col-xs-12 col-sm-4">
+										<label>Entry Date</label>
+										<div class="row-field input-group date" placeholder="">
+											<input type="text" class="form-input form-control" name="entry_date" id="entry_date" required>
+                                            <span class="input-group-addon">
+												<span class="glyphicon glyphicon-calendar"></span>
+											</span>
+										</div>
+									</div>
+								</div>
+                         <div class="row">									
+									<div class="col-xs-12 col-sm-4">
+										<label>Your DC No</label>
+										<div class="row-field " placeholder="Your DC No">
+											<input type="text" class="form-input dc_1_no" name="dc_1_no" required id="yourdcno">
+										</div>
+									</div>
+									<div class="col-xs-12 col-sm-4">
+										<label>Your DC Date</label>
+										<div class="row-field input-group date" placeholder="DD/MM/YYYY">
+											<input type="text" class="form-input  form-control dc_date" name="dc_date" id="dc_date" required>
+                                            <span class="input-group-addon">
+												<span class="glyphicon glyphicon-calendar"></span>
+											</span>
+										</div>
+									</div>
+								</div>						
+						<div>
+							<div class="row">
+                                <div class="col-xs-12 col-sm-4">
+									<label>Customer Input</label>
+									<input type="text" class="form-input customerinfo" id="customerinfo" name="customerinfo">                                   
+								</div>
+								<div class="col-xs-12 col-sm-4">
+									<label>Customer Select</label>
+									<select class="form-select customerName" name="customer_name1" onchange="customerNameChange()" id="customer_name1" required>												
+									</select>
+								</div>
+								
+							</div>
+                            <div class="row">
+                            <div class="col-xs-12 col-sm-4">
+									<label>Customer Address</label>
+									<div class="row-field" placeholder="">
+										<input type="text" class="form-input customer_address" name="customer_address">
+									</div>
+								</div>								
+							</div>
+                            </div>
+							<div class="row">
+								<div class="col-xs-12 col-sm-8">
+									<label>Customer Code</label>
+									<div class="row-field" placeholder="">
+										<input type="text" class="form-input customer_code" name="customer_code">
+									</div>
+								</div>							
+							</div>
+							<div class="add-customers hide">
+								<div class="row">
+									<div class="col-xs-12 col-sm-4">
+										<label>Customer Name</label>
+										<div class="row-field" data-placeholder="Customer Name">
+											<input type="text" class="form-input" name="customer_name2">
+										</div>
+									</div>
+								</div>
+								<div class="row">
+									<div class="col-xs-12 col-sm-8">
+										<label>Address</label>
+										<div class="row-field" data-placeholder="Address">
+											<input type="text" class="form-input" name="customer_address2">
+										</div>
+									</div>							
+								</div>
+							</div>
+							<div class="row">
+								<div class="col-xs-12 col-sm-4">
+									<label>Alternative Mail ID</label>
+									<div class="row-field" placeholder="Alternative Mail ID">
+										<input type="email" pattern="/^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$/" class="form-input customer_mail_id" name="customer_mail_id" required>
+									</div>
+								</div>
+								<div class="col-xs-12 col-sm-4">
+									<label>GST No</label>
+									<div class="row-field" placeholder="">
+										<input type="text" class="form-input gst_no" name="gst_no">
+									</div>
+								</div>
+							</div>
+						</div>
+						<!--<div class="row">
+							<div class="col-xs-12">
+								<h2 class="subHead">Contact Details</h2>
+							</div>
+						</div>
+						<div class="row">
+							<div class="col-xs-12 col-sm-4">
+								<label>Contact Person</label>
+								<div class="row-field" data-placeholder="Contact Person">
+									<input type="text" class="form-input" name="contact_1_person">
+								</div>
+							</div>
+							<div class="col-xs-12 col-sm-4">
+								<label>Mail ID</label>
+								<div class="row-field" data-placeholder="Mail ID">
+									<input type="text" class="form-input" name="Contact_1_mail_id">
+								</div>
+							</div>							
+						</div>-->
+						<div class="contact_person_details">
+							<div class="row">
+								<div class="col-xs-12">
+                                    <div class="dvsubHead">
+									<h2 class="hlink">Contact Details</h2> <a class="showcontacttbl hearderlink" href="javascript:;">Show</a>
+                                        </div>
+                                   
+							</div>
+								</div>
+							<div>
+								<div class="table-responsive contacttbl hide">
+									<table class="table table-striped" id="customerDetailTable">
+										<tr id="trHeader">
+											<td>S.No</td>
+											<td>Contact Person</td>
+											<td>Mail Id</td>
+										</tr>										
+									</table>
+								</div>
+							</div>
+						</div>
+						
+						<div class="job-machine-section">
+							<div class="row">
+								<div class="col-xs-12">
+									<h2 class="subHead">Job Details</h2>
+								</div>
+							</div>
+							<div class="job-details">
+								<div class="row">
+									<div class="col-xs-12 col-sm-4">
+										<label>Job No</label>
+										<div class="row-field" placeholder="Job No">
+											<input type="text" class="form-input job_no" name="job_1_no" id="job_1_no" required>
+										</div>
+									</div>
+									<div class="col-xs-12 col-sm-4">
+										<label>Job Name</label>
+										<div class="row-field" placeholder="Job Name">
+											<input type="text" class="form-input job_name" name="job_1_name" id="job_1_name" required>
+										</div>
+									</div>
+								</div>
+								<div class="row">
+                                    <div class="col-xs-12 col-sm-4">
+										<label>Drawing Details</label>
+										<div class="row-field" placeholder="Drawing Details">
+											<input type="text" class="form-input draw_det1" name="drawing_1_details">
+										</div>
+									</div>
+									<div class="col-xs-12 col-sm-4">
+										<label>Work Details</label>
+										<div class="row-field" placeholder="Work Details">
+											<input type="text" class="form-input work_det1" name="work_1_details">
+										</div>
+									</div>									
+								</div>
+
+                                <div class="row">
+                                    <div class="col-xs-12 col-sm-4">
+										<label>Job StartTime</label>
+										<div class="row-field input-group date" placeholder="Job StartTime">
+											<input type="text" class="form-input form-control job_starttime" name="job_1_starttime" id="job_1_starttime">
+                                             <span class="input-group-addon">
+												<span class="glyphicon glyphicon-calendar"></span>
+											</span>
+										</div>
+									</div>
+									<div class="col-xs-12 col-sm-4">
+										<label>Job EndTime</label>
+										<div class="row-field input-group date" placeholder="Job EndTime">
+											<input type="text" class="form-input form-control job_endtime" name="job_1_endtime" id="job_1_endtime"> <span class="input-group-addon">
+												<span class="glyphicon glyphicon-calendar"></span>
+											</span>
+										</div>
+									</div>									
+								</div>
+
+							<div class="machine-details">
+								<div class="machine-section">
+									<div class="row">
+										<div class="col-xs-12">
+											<h2>Machine Details</h2>
+										</div>
+									</div>
+									<div class="row">
+										<div class="col-xs-12 col-sm-4">
+											<label>Machine Details</label>
+											<div class="row-field">
+												<select class="form-select machine_detail" name="machdetjob_1">
+													<option value="">Please Select</option>
+												</select>
+											</div>
+										</div>										
+									</div>					
+									<div class="row">
+										<div class="col-xs-offset-0 col-sm-4">
+											<a href="javascript:;" class="btn btn-primary btn-md add-machine-details" data-id="1" title="Add Machine">Add Machine</a>
+										</div>
+									</div>
+								</div>
+								<div class="machine_details_view">
+									<div class="table-responsive">
+										<table class="table table-striped">
+											<tr>
+												<th>Job No</th>
+												<th>Machine Id</th>
+												<th>Machine Details</th>
+												<th>&nbsp;</th>
+											</tr>
+										</table>
+									</div>
+								</div>								
+							</div>
+						</div>
+                            </div>					
+						<hr/>
+						<div class="row">
+							<div class="col-xs-offset-0 col-sm-4">
+								<a href="javascript:;" class="btn btn-primary btn-md add-job" title="Add Job">Add Job</a>
+							</div>
+						</div>
+						<div>
+							<div class="row">
+								<div class="col-xs-12 col-sm-4">
+									<label>Photo Upload Status</label>
+									<div class="row-field">
+										<select class="form-select photo_upload_status" name="photo_upload_status">
+											<option value="No">No</option>
+											<option value="Yes">Yes</option>
+										</select>
+									</div>
+								</div>
+								<div class="col-xs-12 col-sm-4">
+									<label>&nbsp;</label>
+									<div class="row-field">
+										<input type="file" class="form-input" name="photo_upload" id="fileUpload">
+									</div>
+								</div>
+							</div>
+							<div class="row">
+								<div class="col-xs-12 col-sm-4">
+									<label>Inspection Status</label>
+									<div class="row-field">
+										<select class="form-select inspection_status" name="inspection_status">
+                                            <option value="Started">Started</option>
+											<option value="Pending">Pending</option>
+											<option value="Completed">Completed</option>
+                                            <option value="Cancel">Cancel</option>
+										</select>
+									</div>
+								</div>
+								<div class="col-xs-12 col-sm-4">
+									<label>Remarks</label>
+									<div class="row-field" placeholder="remarks">
+										<input type="text" class="form-input remarks" name="remarks">
+									</div>
+								</div>
+							</div>
+							<div class="row">
+								<div class="col-xs-12 col-sm-4">
+									<label>Prepared By</label>
+									<div class="row-field" placeholder="Prepared By">
+										<input type="text" class="form-input preparedby" name="prepared_by" required>
+									</div>
+								</div>
+                                <div class="col-xs-12 col-sm-4">
+									<label>Completed By</label>
+									<div class="row-field" placeholder="Completed By">
+										<input type="text" class="form-input completedby" name="completed_by">
+									</div>
+								</div>
+							</div>
+						</div>
+						<div class="row">
+							<div class="col-xs-offset-0 col-sm-4">
+								<a href="javascript:;" class="btn btn-primary btn-md btn-submitfrm" title="submit">Submit</a>
+							</div>
+                            <div class="col-xs-12 col-sm-4">
+									<h4><label class="lblmsg"></label></h4>
+								</div>
+						</div>
+					</form>
+				</div>
+			</div>			
+        <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+        <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+        <script type="text/javascript" src="Scripts/main.js"></script>
+        <script type="text/javascript" src="Scripts/moment.js"></script>
+        <script type="text/javascript" src="Scripts/jquery.validate.js"></script>
+		<script type="text/javascript" src="Scripts/bootstrap-datetimepicker.js"></script>
+        <!--<script src="views/js/jquery.js"></script>
+		<script src="views/js/main.js"></script>-->
+	</body>
+</html>

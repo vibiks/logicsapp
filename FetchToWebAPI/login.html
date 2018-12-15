@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Login form</title>
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<link rel="stylesheet" href="Styles/bootstrap.css">
+		<link rel="stylesheet" href="Styles/style.css">
+	</head>
+	<body>
+        <div>
+		<div id="wrapper">
+			<div class="overlay-loader">
+				<div id="floatingBarsG">
+					<div class="blockG" id="rotateG_01"></div>
+					<div class="blockG" id="rotateG_02"></div>
+					<div class="blockG" id="rotateG_03"></div>
+					<div class="blockG" id="rotateG_04"></div>
+					<div class="blockG" id="rotateG_05"></div>
+					<div class="blockG" id="rotateG_06"></div>
+					<div class="blockG" id="rotateG_07"></div>
+					<div class="blockG" id="rotateG_08"></div>
+				</div>
+			</div>
+			<div class="container">
+			
+				<h2 class="subHead">Login Form</h2>
+					<h3 class="lblmsg""></h3>
+					<form name="loginfrm" id="loginfrm">
+					<div class="">
+						<div class="row">
+								<div class="col-xs-12 col-sm-4">
+												<label>&nbsp;</label>
+												</div>	
+                                    <div class="col-xs-12 col-sm-4">
+										<label>UserName</label>
+										<div class="row-field" placeholder="User Name">
+											<input type="text" class="form-input" name="txtusername" id="txtusername">
+										</div>
+									</div>
+																	
+								</div>
+								<div class="row">
+									<div class="col-xs-12 col-sm-4">
+												<label>&nbsp;</label>
+												</div>	
+                                   <div class="col-xs-12 col-sm-4">
+										<label>Password</label>
+										<div class="row-field" placeholder="Password">
+											<input type="password" class="form-input" name="txtpassword" id="txtpassword">
+										</div>
+									</div>									
+								</div>
+								<div class="row">									
+									<div class="col-xs-12 col-sm-4">&nbsp;
+										
+									</div>
+									<div class="col-xs-12 col-sm-4">
+										<a href="javascript:;" class="btn btn-primary btn-md btn-login" title="submit">Submit</a>
+											<a href="javascript:document.getElementById('loginfrm').reset();" class="btn btn-primary btn-md btn-clear" title="Clear">Clear</a>
+										</div>
+									
+								</div>
+							</div>
+					</form>
+				</div>
+			</div>
+		</div>
+		
+		<script src="Scripts/jquery.js"></script>
+		<script src="Scripts/moment.js"></script>		
+		<script src="Scripts/login.js"></script>
+	</body>
+</html>
